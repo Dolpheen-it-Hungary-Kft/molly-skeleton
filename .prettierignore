@@ -1,0 +1,5 @@
+**/*.yml
+**/*.gitignore
+**/*.prettierignore
+**/*.cnf
+**/*.json

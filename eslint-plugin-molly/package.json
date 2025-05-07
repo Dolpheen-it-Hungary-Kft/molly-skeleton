@@ -1,0 +1,15 @@
+{
+	"name": "eslint-plugin-molly",
+	"version": "1.0.0",
+	"description": "Custom ESLint rules for Molly",
+	"main": "index.js",
+	"keywords": [
+		"eslint",
+		"eslintplugin"
+	],
+	"author": "Molly team",
+	"license": "ISC",
+	"dependencies": {
+		"eslint": "^8.57.0"
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"experimentalDecorators": true,
+		"resolveJsonModule": true,
+		"target": "es2017",
+		"module": "commonjs",
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": false,
+		"skipLibCheck": true,
+		"lib": ["es2021","DOM"]                                
+	},
+  "exclude": ["**/tests/**/playgrounds"]
+}

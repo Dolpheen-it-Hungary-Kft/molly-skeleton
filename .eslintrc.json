@@ -1,0 +1,91 @@
+{
+  "env": {
+    "node": true,
+    "es2021": true
+  },
+  "ignorePatterns": ["**/tests/**/playgrounds"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "molly",
+    "import"
+  ],
+  "rules": {
+    "no-empty-pattern": 0,
+    "@typescript-eslint/consistent-type-assertions": [
+      "error",
+      {
+        "assertionStyle": "angle-bracket",
+        "objectLiteralTypeAssertions": "allow"
+      }
+    ],
+    "semi": [
+      "error",
+      "never"
+    ],
+    "indent": [
+      "error",
+      "tab",
+      {
+        "SwitchCase": 1,
+        "ignoredNodes": [
+          "ConditionalExpression",       // Ignores indentation for ternary expressions
+          "ConditionalExpression *"    // Ensures all parts of the ternary are ignored
+        ]
+      }
+    ],
+    "brace-style": [
+      "error",
+      "1tbs",
+      {
+        "allowSingleLine": true
+      }
+    ],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": true,
+        "varsIgnorePattern": "^_",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/no-extra-semi": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-mixed-spaces-and-tabs": "warn",
+    "molly/no-test-only": "error",
+    "import/no-unresolved": [
+      "error",
+      {
+        "caseSensitive": true
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "./tsconfig.json"
+      }
+    },
+    "overrides": [
+      {
+        "files": [
+          "*.spec.ts"
+        ],
+        "rules": {
+          "molly/no-test-only": "error"
+        }
+      }
+    ]
+  }
+}
