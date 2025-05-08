@@ -1,6 +1,7 @@
 {
 	"name": "molly-mono",
 	"scripts": {
+		"type-check": "tsc --noEmit",
 		"dev:test": "cross-env test_env=TEST metrics=true npx playwright test --workers 6",
 		"dev:test:headed": "cross-env test_env=TEST metrics=true npx playwright test --workers 6 --headed",
 		"dev:test:debug": "cross-env test_env=TEST metrics=true npx playwright test --workers 1 --debug --no-deps"

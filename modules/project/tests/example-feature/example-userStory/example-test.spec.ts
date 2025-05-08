@@ -6,12 +6,11 @@ test.describe(
 		tag: ['@TAG']
 	},
 	() => {
-		test.only('Example test case title', async ({ User }, testInfo) => {
+		test('Example test case title', async ({ User }, testInfo) => {
 			testInfo.annotations.push({ type: 'test_key', description: 'example-test-key' })
 
 			await test.step(`Example test step`, async () => {
 				await User.examplePage.navigateHere()
-				await User.examplePage.page.pause()
 			})
 		})
 	}
